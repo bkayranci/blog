@@ -9,10 +9,14 @@ toc: true
 
 # Description
 
-Kubernetes clusterlarınızı yönetmeye yarayan oldukça kullanışlı bir araç.
+A very useful desktop application for managing your Kubernetes clusters.
 
 ## Screenshot
 ![k8slens Screenshot]({{ "/assets/img/kubernetes-ide-lens/kubernetes-ide-lens-screenshot.png" | relative_url }} "k8slens Screenshot")
+
+## Links
+- [Home](https://k8slens.dev){:target="_blank"}
+- [Github](https://github.com/lensapp/lens){:target="_blank"}
 
 # Installation
 
@@ -25,5 +29,3 @@ $ yay -S aur/lens-bin
 ```terminal
 $ sudo snap install kontena-lens --classic
 ```
-
-https://k8slens.dev/
