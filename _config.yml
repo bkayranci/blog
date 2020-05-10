@@ -18,7 +18,7 @@ description: >-                        # used by seo meta and the atom feed
   and focuses on text presentation.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'protocol://domain'
+url: 'https://bkayranci.github.io'
 
 author: Turkalp                  # change to your full name
 
@@ -39,7 +39,7 @@ social:
     - https://github.com/bkayranci       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/bkayranci
 
 google_site_verification: 9-V-B2xR3aIQFsDmVwdV1V1_5YqFddkYNDBcgk1_6iI # change to your verification string
 
