@@ -4,9 +4,13 @@ renovate:
   variables:
     RENOVATE_PLATFORM: "gitlab"
     RENOVATE_REPOSITORIES: $CI_PROJECT_PATH
-    LOG_LEVEL: "debug"
   script:
     - renovate
+  only:
+    - schedules
+    - web
+    - main
+    - master
 
 build:
   stage: build
