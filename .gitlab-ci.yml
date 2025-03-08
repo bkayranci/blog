@@ -12,6 +12,21 @@ renovate:
     - main
     - master
 
+build-npm:
+  stage: build
+  image: node:22
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - assets/js/dist
+  only:
+    - master
+    - main
+    - ^renovate\/.*$
+    - merge_requests
+
 build:
   stage: build
   image: ruby:3.4
@@ -25,6 +40,8 @@ build:
   artifacts:
     paths:
       - _site
+  needs:
+    - build-npm
   only:
     - master
     - main
