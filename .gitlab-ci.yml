@@ -1,8 +1,14 @@
-include:
-    - template: Jobs/Dependency-Scanning.latest.gitlab-ci.yml
+stages:
+  - test
 
-dependency-scanning:
-  stage: deploy
+renovate:
+  stage: test
+  image: renovate/renovate:latest
+  script:
+    - export LOG_LEVEL=debug  # Daha detaylı log almak için
+    - export RENOVATE_REPOSITORIES=$CI_PROJECT_PATH
+    - export RENOVATE_TOKEN=$CI_JOB_TOKEN
+    - renovate
 
 build:
   stage: build
