@@ -1,6 +1,8 @@
 build:
   stage: build
-  image: ruby:3.3
+  image: ruby:3.3-alpine
+  before_script:
+    - apk add git
   script:
     - bundle config path vendor/bundle
     - bundle install
