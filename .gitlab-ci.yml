@@ -1,6 +1,6 @@
 build:
   stage: build
-  image: ruby:3.3-alpine
+  image: ruby:3.3
   before_script:
     - apk add git
   script:
