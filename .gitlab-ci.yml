@@ -1,0 +1,24 @@
+build:
+  stage: build
+  image: ruby:3.3
+  script:
+    - bundle install
+    - bundle exec jekyll b -d "_site"
+  artifacts:
+    paths:
+      - _site
+  only:
+    - master
+    - main
+
+pages:
+  stage: deploy
+  script:
+    - mv _site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+    - main
+
