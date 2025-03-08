@@ -1,9 +1,6 @@
 include:
     - template: Jobs/Dependency-Scanning.latest.gitlab-ci.yml
 
-variables:
-  DS_ENFORCE_NEW_ANALYZER: 'true'
-
 dependency-scanning:
   stage: deploy
 
