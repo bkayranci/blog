@@ -14,7 +14,7 @@ renovate:
 
 build-npm:
   stage: build
-  image: node:22
+  image: node:23
   script:
     - npm install
     - npm run build
