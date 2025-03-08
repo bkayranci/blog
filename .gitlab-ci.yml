@@ -14,7 +14,7 @@ renovate:
 
 build:
   stage: build
-  image: ruby:3.3
+  image: ruby:3.4
   script:
     - bundle config path vendor/bundle
     - bundle install
