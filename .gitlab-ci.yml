@@ -1,10 +1,12 @@
 renovate:
   stage: test
   image: renovate/renovate:latest
+  environment:
+    RENOVATE_PLATFORM: "gitlab"
+    RENOVATE_TOKEN: $CI_JOB_TOKEN
+    RENOVATE_REPOSITORIES: $CI_PROJECT_PATH
+    LOG_LEVEL: "debug"
   script:
-    - export LOG_LEVEL=debug  # Daha detaylı log almak için
-    - export RENOVATE_REPOSITORIES=$CI_PROJECT_PATH
-    - export RENOVATE_TOKEN=$CI_JOB_TOKEN
     - renovate
 
 build:
@@ -26,6 +28,8 @@ build:
 
 pages:
   stage: deploy
+  needs:
+    - build
   script:
     - mv _site public
   artifacts:
