@@ -4,6 +4,9 @@ build:
   script:
     - bundle install
     - bundle exec jekyll b -d "_site"
+  cache:
+    paths:
+      - vendor/bundle
   artifacts:
     paths:
       - _site
