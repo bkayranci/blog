@@ -55,8 +55,14 @@ pages:
   stage: deploy
   needs:
     - build
+  variables:
+    FF_USE_FASTZIP: "true"
+    ARTIFACT_COMPRESSION_LEVEL: "fastest"
   script:
     - mv _site public
+    - find public -type f -regex '.*\.\(htm\|html\|xml\|txt\|text\|js\|css\|svg\)$' -exec gzip -f -k {} \;
+    - find public -type f -regex '.*\.\(htm\|html\|xml\|txt\|text\|js\|css\|svg\)$' -exec brotli -f -k {} \;
+  pages: true
   artifacts:
     paths:
       - public
