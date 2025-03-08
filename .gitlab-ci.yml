@@ -1,6 +1,6 @@
 build:
   stage: build
-  image: ruby:3.3-alpine
+  image: ruby:3.3-slim
   script:
     - bundle config path vendor/bundle
     - bundle install
