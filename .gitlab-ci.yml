@@ -1,7 +1,7 @@
 renovate:
   stage: test
   image: renovate/renovate:latest
-  environment:
+  variables:
     RENOVATE_PLATFORM: "gitlab"
     RENOVATE_TOKEN: $CI_JOB_TOKEN
     RENOVATE_REPOSITORIES: $CI_PROJECT_PATH
