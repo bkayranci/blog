@@ -16,5 +16,6 @@
     "gitlabci",
     "devcontainer",
     "bundler"
-  ]
+  ],
+  "recreateWhen": "always"
 }
