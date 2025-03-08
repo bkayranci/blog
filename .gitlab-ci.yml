@@ -1,6 +1,3 @@
-stages:
-  - test
-
 renovate:
   stage: test
   image: renovate/renovate:latest
