@@ -29,6 +29,7 @@ build:
     - master
     - main
     - ^renovate\/.*$
+    - merge_requests
 
 pages:
   stage: deploy
