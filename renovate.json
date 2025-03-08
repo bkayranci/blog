@@ -1,3 +1,20 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "enabled": false
+    }
+  ],
+  "enabledManagers": [
+    "npm",
+    "gitlabci",
+    "devcontainer",
+    "bundler"
+  ]
 }
