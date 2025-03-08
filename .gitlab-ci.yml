@@ -28,6 +28,7 @@ build:
   only:
     - master
     - main
+    - ^renovate\/.*$
 
 pages:
   stage: deploy
